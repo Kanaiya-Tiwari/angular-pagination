@@ -1,0 +1,32 @@
+<Table>
+  <thead>
+    <tr >
+      <th *ngFor="let hvalue of header">{{hvalue}}</th> 
+    </tr>
+    <!-- <tr>
+      <th>hello</th>
+      <th>hello</th>
+      <th>hello</th>
+    </tr> -->
+  </thead>
+  <tbody >
+    <tr *ngFor="let data of newarray"> 
+
+      <td >{{data.userId }}</td>     
+      <td >{{data.id }}</td> 
+      <td>{{data.title}}</td>    
+      <td>{{data.body}}</td>
+    </tr>
+  </tbody>
+  
+ 
+</Table>
+<div>
+  <span *ngFor="let data of newIndex" >
+    
+<button *ngIf="data<=3" (click)="moreValue(data)">{{data}}</button>
+<span *ngIf="data>=3 && data<=8 ">...</span>
+<button *ngIf="data>=9"  (click)="moreValue(data)">{{data}}</button>
+    </span>
+  
+</div>
